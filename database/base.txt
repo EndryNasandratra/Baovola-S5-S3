@@ -1,0 +1,106 @@
+AVION (
+    ID,
+    MATRICULE,
+    CAPACITE
+)
+
+AEROPORT (
+    ID,
+    NOM
+)
+
+PILOTE (
+    ID,
+    NOM,
+    PRENOM
+)
+
+VOL (
+    ID,
+    ID_AEROPORT_DEPART,
+    ID_AEROPORT_ARRIVEE,
+    DUREE
+)
+
+STATUT_VOL (
+    ID,
+    NOM
+)
+
+VOL_PROGRAMMATION (
+    ID,
+    ID_VOL,
+    ID_AVION,
+    DATE_HEURE
+)
+
+VOL_PROGRAMMATION_STATUT (
+    ID,
+    ID_VOL_PROGRAMMATION,
+    ID_STATUT,
+    DATE
+)
+
+AVION_PILOTE (
+    ID_AVION,
+    ID_PILOTE,
+    DATE
+)
+
+CLIENT (
+    ID,
+    NOM,
+    PRENOM,
+    EMAIL,
+    TELEPHONE
+)
+
+CLASSE (
+    ID,
+    NOM
+)
+
+CLASSE_PLACE (
+    ID_CLASSE,
+    PLACE_DEBUT,
+    PLACE_FIN,
+    ID_AVION
+)
+
+RESERVATION (
+    ID,
+    ID_VOL_PROGRAMMATION,
+    ID_CLIENT,
+    NOMBRE_PLACES
+)
+
+RESERVATION_PLACE (
+    ID_RESERVATION,
+    PLACE,
+    ID_TYPE_PASSAGER
+)
+
+STATUT_RESERVATION (
+    ID,
+    NOM
+)
+
+HISTORIQUE_RESERVATION (
+    ID,
+    ID_RESERVATION,
+    ID_STATUT,
+    DATE
+)
+
+TYPE_PASSAGER (
+    ID,
+    NOM
+)
+
+TARIF_VOL (
+    ID,
+    ID_VOL_PROGRAMMATION,
+    ID_CLASSE,
+    ID_TYPE_PASSAGER,
+    TARIF
+)

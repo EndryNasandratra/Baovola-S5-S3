@@ -1,0 +1,298 @@
+/* ============================================
+   Emirates Airlines Theme - CSS
+   Colors: Gold (#d4a944), Black (#1a1a1a), White
+   ============================================ */
+
+:root {
+    --emirates-gold: #d4a944;
+    --emirates-dark-gold: #8b6308;
+    --emirates-black: #1a1a1a;
+    --emirates-dark-gray: #2d2d2d;
+    --emirates-light-gray: #f5f5f5;
+    --emirates-white: #ffffff;
+    --emirates-accent: #00a86b;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    color: #2d2d2d;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+a {
+    color: var(--emirates-gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--emirates-dark-gold);
+}
+
+/* Buttons */
+.btn-emirates {
+    background: linear-gradient(135deg, var(--emirates-gold) 0%, var(--emirates-dark-gold) 100%);
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(212, 169, 68, 0.15);
+}
+
+.btn-emirates:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(212, 169, 68, 0.25);
+}
+
+.btn-emirates:active {
+    transform: translateY(0);
+}
+
+/* Cards */
+.emirates-card {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e8dcc4;
+    box-shadow: 0 2px 8px rgba(212, 169, 68, 0.08);
+    transition: all 0.3s ease;
+}
+
+.emirates-card:hover {
+    box-shadow: 0 8px 16px rgba(212, 169, 68, 0.15);
+    border-color: var(--emirates-gold);
+}
+
+/* Badges */
+.badge-emirates {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #fef9f3;
+    color: var(--emirates-gold);
+    border: 1px solid #fde8cc;
+}
+
+.badge-emirates.active {
+    background-color: var(--emirates-gold);
+    color: #1a1a1a;
+}
+
+/* Tables */
+.emirates-table thead {
+    background: linear-gradient(135deg, #fef9f3 0%, #fef3e6 100%);
+    color: #1a1a1a;
+}
+
+.emirates-table tbody tr {
+    border-bottom: 1px solid #e8dcc4;
+    transition: all 0.2s ease;
+}
+
+.emirates-table tbody tr:hover {
+    background-color: #fef9f3;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--emirates-gold);
+    box-shadow: 0 0 0 3px rgba(212, 169, 68, 0.1);
+    background-color: #fef9f3;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--emirates-gold);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--emirates-dark-gold);
+}
+
+/* Gradient Backgrounds */
+.gradient-emirates-gold {
+    background: linear-gradient(135deg, var(--emirates-gold) 0%, var(--emirates-dark-gold) 100%);
+}
+
+.gradient-emirates-dark {
+    background: linear-gradient(135deg, var(--emirates-dark-gray) 0%, var(--emirates-black) 100%);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-badge.on-time {
+    background-color: rgba(0, 168, 107, 0.1);
+    color: var(--emirates-accent);
+}
+
+.status-badge.delayed {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #ff9800;
+}
+
+.status-badge.cancelled {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+}
+
+.status-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Navigation Highlights */
+.nav-active {
+    background: linear-gradient(135deg, var(--emirates-gold) 0%, var(--emirates-dark-gold) 100%);
+    color: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(212, 169, 68, 0.25);
+}
+
+/* Alert/Info boxes */
+.alert-emirates {
+    padding: 12px 16px;
+    border-radius: 6px;
+    border-left: 4px solid var(--emirates-gold);
+    background-color: #fef9f3;
+    color: #1a1a1a;
+}
+
+/* Shadows */
+.shadow-emirates {
+    box-shadow: 0 4px 12px rgba(212, 169, 68, 0.15);
+}
+
+.shadow-emirates-lg {
+    box-shadow: 0 8px 24px rgba(212, 169, 68, 0.2);
+}
+
+/* Borders */
+.border-emirates {
+    border-color: var(--emirates-gold);
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-scale {
+    animation: fadeInScale 0.3s ease;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .emirates-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .emirates-card {
+        page-break-inside: avoid;
+    }
+}
